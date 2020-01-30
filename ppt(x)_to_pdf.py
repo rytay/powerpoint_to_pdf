@@ -18,7 +18,7 @@ for f in files:
     print('Converting : ' + f + ' to pdf.')
     subprocess.run(proc)
     if remove:
-        print('Deleting : ' + f + '...'
+        print('Deleting : ' + f + '...')
         os.remove(f)
         
 print('Done. Converted '+ len(files) + ' documents.')
