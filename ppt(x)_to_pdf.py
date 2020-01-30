@@ -10,15 +10,14 @@ remove = False
 if delete is 'y':
     remove = True
 
-i = 0
 for f in files:
     raw_proc = "unoconv -f pdf " + f
     proc = raw_proc.split()
+    print('Converting : ' + f + ' to pdf')
     subprocess.run(proc)
     if remove:
-        print('Converting : ' + f + ' to pdf')
         os.remove(f)
-
-print('Done. Converted '+ str(i) + ' documents.')
+        
+print('Done. Converted '+ len(files) + ' documents.')
 exit()
 
